@@ -20,9 +20,19 @@ export default {
         title: 'Description',
         required: true,
         maxLength: 500
+      },
+      backgroundImageSrc: {
+        type: 'media',
+        title: 'Background Image',
+        required: true
+      },
+      backgroundImageAlt: {
+        type: 'string',
+        title: 'Background Image Alt Text',
+        required: true
       }
     },
-    required: ['title', 'description']
+    required: ['title', 'description', 'backgroundImageSrc', 'backgroundImageAlt']
   },
 
   listFields: ['title', 'description'],
