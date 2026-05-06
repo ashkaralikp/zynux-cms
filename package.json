@@ -4,7 +4,10 @@
   "description": "SonicJS Deploy Now - Deploy to Cloudflare Workers in one click",
   "type": "module",
   "scripts": {
+    "postinstall": "node scripts/patch-sonicjs-core.mjs",
+    "predev": "node scripts/patch-sonicjs-core.mjs",
     "dev": "wrangler dev",
+    "predeploy": "node scripts/patch-sonicjs-core.mjs",
     "deploy": "wrangler deploy",
     "db:migrate": "wrangler d1 migrations apply DB --local",
     "db:migrate:prod": "wrangler d1 migrations apply DB --remote"
