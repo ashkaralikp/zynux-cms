@@ -75,12 +75,6 @@ export default {
               items: {
                 type: 'object',
                 properties: {
-                  icon: {
-                    type: 'string',
-                    title: 'Lucide Icon Name',
-                    required: true,
-                    maxLength: 100,
-                  },
                   title: {
                     type: 'string',
                     title: 'Title',
