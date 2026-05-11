@@ -3,89 +3,46 @@ import type { CollectionConfig } from '@sonicjs-cms/core'
 export default {
   name: 'footer',
   displayName: 'Footer',
-  description: 'Manage the homepage footer content',
+  description: 'Manage the homepage footer brand description and social links',
   icon: '🦶',
 
   schema: {
     type: 'object',
     properties: {
-      columns: {
-        type: 'array',
-        title: 'Footer Columns',
-        itemTitle: 'Column',
-        items: {
-          type: 'object',
-          properties: {
-            title: {
-              type: 'string',
-              title: 'Column Title',
-              required: true,
-              maxLength: 100,
-            },
-            description: {
-              type: 'textarea',
-              title: 'Description',
-              maxLength: 400,
-            },
-            links: {
-              type: 'array',
-              title: 'Links',
-              itemTitle: 'Link',
-              items: {
-                type: 'object',
-                properties: {
-                  label: {
-                    type: 'string',
-                    title: 'Label',
-                    required: true,
-                    maxLength: 100,
-                  },
-                  href: {
-                    type: 'string',
-                    title: 'Href',
-                    required: true,
-                    maxLength: 200,
-                  },
-                },
-              },
-            },
-          },
-        },
+      description: {
+        type: 'textarea',
+        title: 'Brand Description',
+        required: true,
+        maxLength: 300,
       },
-      legalLinks: {
+      socialLinks: {
         type: 'array',
-        title: 'Legal Links',
-        itemTitle: 'Legal Link',
+        title: 'Social Links',
+        itemTitle: 'Social Link',
         items: {
           type: 'object',
           properties: {
             label: {
               type: 'string',
-              title: 'Label',
+              title: 'Platform Name',
               required: true,
-              maxLength: 100,
+              maxLength: 50,
             },
             href: {
               type: 'string',
-              title: 'Href',
+              title: 'URL',
               required: true,
-              maxLength: 200,
+              maxLength: 300,
             },
           },
         },
       },
-      copyright: {
-        type: 'string',
-        title: 'Copyright Text',
-        required: true,
-        maxLength: 200,
-      },
     },
-    required: ['columns', 'legalLinks', 'copyright'],
+    required: ['description', 'socialLinks'],
   },
 
-  listFields: ['copyright'],
-  searchFields: ['copyright'],
+  listFields: ['description'],
+  searchFields: ['description'],
   defaultSort: 'createdAt',
   defaultSortOrder: 'desc',
 } satisfies CollectionConfig
