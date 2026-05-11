@@ -9,6 +9,7 @@ import type { SonicJSConfig } from '@sonicjs-cms/core'
 
 // Import your collection configurations
 // Add new collections here after creating them in src/collections/
+import blogCollection from './collections/blog.collection'
 import contactCollection from './collections/contact.collection'
 import coursesCollection from './collections/courses.collection'
 import footerCollection from './collections/footer.collection'
@@ -22,6 +23,7 @@ import trustCollection from './collections/trust.collection'
 // Register collections BEFORE creating the app
 // This ensures they are synced to the database on startup
 registerCollections([
+  blogCollection,
   contactCollection,
   coursesCollection,
   footerCollection,
