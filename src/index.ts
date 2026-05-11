@@ -16,6 +16,7 @@ import heroCollection from './collections/hero.collection'
 import navbarCollection from './collections/navbar.collection'
 import placementSuccessCollection from './collections/placement-success.collection'
 import programsCollection from './collections/programs.collection'
+import testimonialsCollection from './collections/testimonials.collection'
 import trustCollection from './collections/trust.collection'
 
 // Register collections BEFORE creating the app
@@ -28,6 +29,7 @@ registerCollections([
   navbarCollection,
   placementSuccessCollection,
   programsCollection,
+  testimonialsCollection,
   trustCollection,
 ])
 
